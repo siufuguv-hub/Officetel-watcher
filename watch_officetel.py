@@ -14,14 +14,15 @@ TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "")
 
 SITES = [
     {
-        "name": "예시사이트",
-        "url": "https://example.com/search?q=오피스텔",  # 너의 검색결과 URL로 교체
-        "item_selector": "li",
-        "title_selector": "a",
-        "url_selector": "a",
-        "encoding": ""
+        "name": "HackerNews-연습",
+        "url": "https://news.ycombinator.com/",
+        "item_selector": "tr.athing",
+        "title_selector": ".titleline a",
+        "url_selector": ".titleline a",
+        "encoding": "utf-8"
     },
 ]
+KEYWORDS = ["a"]  # 아무 글자(전부 매칭되게) → 알림이 꼭 오게!
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (iPad; CPU OS 16_0 like Mac OS X) "
